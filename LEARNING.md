@@ -8,36 +8,40 @@ I want to become a very capable AI engineer who understands the fundamentals and
 ## Placement
 - Date: 2026-10-22
 - Score: 2/10 (Math & Statistics 0/2, Classical ML 0/2, Deep Learning 0/2, NLP & Transformers 1/2, Applied AI 1/2)
-- Entry point: Phase 1: Math Foundations
+- Assessment preserved: Math & Statistics 0/2; Classical ML 0/2; Deep Learning 0/2; NLP & Transformers 1/2; Applied AI 1/2. Use the zero-score areas for extra support when those topics arise; placement does not change the requested lesson order.
+- Entry point: Official roadmap, from SE 00 — Setup & Tooling
 - Pace: ~10 hours/week
 
-## Path
-| Phase | Name | Status | Est. hours |
-|-------|------|--------|------------|
-| 0 | Setup & Tooling | Skip | -- |
-| 1 | Math Foundations | Do | 23 |
-| 2 | ML Fundamentals | Do | 26 |
-| 3 | Deep Learning Core | Do | 15 |
-| 4 | Computer Vision | Do | 27 |
-| 5 | NLP — Foundations to Advanced | Do | 30 |
-| 6 | Speech & Audio | Do | 18 |
-| 7 | Transformers Deep Dive | Do | 14 |
-| 8 | Generative AI | Do | 14 |
-| 9 | Reinforcement Learning | Do | 13 |
-| 10 | LLMs from Scratch | Do | 26 |
-| 11 | LLM Engineering | Do | 19 |
-| 12 | Multimodal AI | Do | 65 |
-| 13 | Tools & Protocols | Do | 76 |
-| 14 | Agent Engineering | Do | 55 |
-| 15 | Autonomous Systems | Do | 20 |
-| 16 | Multi-Agent & Swarms | Do | 28 |
-| 17 | Infrastructure & Production | Do | 34 |
-| 18 | Ethics, Safety & Alignment | Do | 31 |
-| 19 | Capstone Projects | Do | 620 |
+## Official roadmap
+Source: [official course README and Contents](https://github.com/rohitg00/ai-engineering-from-scratch/blob/main/README.md#contents). The installed course material in this workspace does not include the course `README.md`, `ROADMAP.md`, or `phases/` lesson files; the official online README was consulted for the roadmap and the first lesson.
+
+Study rule: follow every phase and lesson in the published order, starting at SE 00. Do not skip or reorder based on placement results. Verify lesson titles and sequence against the official course source as each phase is reached; do not invent missing titles. Advance only after the learner demonstrates understanding and completes the lesson assessment/exercises.
+
+Phases, in official order: SE 00 — Setup & Tooling; 01 — Math Foundations; 02 — ML Fundamentals; 03 — Deep Learning Core; 04 — Computer Vision; 05 — NLP; 06 — Speech & Audio; 07 — Transformers; 08 — Generative AI; 09 — Reinforcement Learning; 10 — LLMs from Scratch; 11 — LLM Engineering; 12 — Multimodal; 13 — Tools & Protocols; 14 — Agent Engineering; 15 — Autonomous Systems; 16 — Multi-Agent & Swarms; 17 — Infrastructure & Production; 18 — Ethics & Alignment; 19 — Capstone Projects.
+
+### Lesson order and progress
+Only the complete SE 00 lesson list is recorded here so far; later phase lesson titles will be added from the official source as each phase is reached. No lesson is complete yet.
+
+| Phase | # | Official lesson | Status |
+|-------|---:|----------------|--------|
+| SE 00 — Setup & Tooling | 01 | Dev Environment | **Current** |
+| SE 00 — Setup & Tooling | 02 | Git & Collaboration | Not started |
+| SE 00 — Setup & Tooling | 03 | GPU Setup & Cloud | Not started |
+| SE 00 — Setup & Tooling | 04 | APIs & Keys | Not started |
+| SE 00 — Setup & Tooling | 05 | Jupyter Notebooks | Not started |
+| SE 00 — Setup & Tooling | 06 | Python Environments | Not started |
+| SE 00 — Setup & Tooling | 07 | Docker for AI | Not started |
+| SE 00 — Setup & Tooling | 08 | Editor Setup | Not started |
+| SE 00 — Setup & Tooling | 09 | Data Management | Not started |
+| SE 00 — Setup & Tooling | 10 | Terminal & Shell | Not started |
+| SE 00 — Setup & Tooling | 11 | Linux for AI | Not started |
+| SE 00 — Setup & Tooling | 12 | Debugging & Profiling | Not started |
+| SE 00 — Setup & Tooling | 13 | Python for AI Engineering | Not started |
 
 ## Progress log
 | Date | Lesson | Quiz | Note |
 |------|--------|------|------|
+| 2026-10-22 | SE 00/01 Dev Environment | In progress | Began official lesson; no assessment or completion recorded yet. |
 
 ## Review queue
 <empty for now; learn adds lessons the quizzes flag>
