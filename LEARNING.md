@@ -26,7 +26,7 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 |-------|---:|----------------|--------|
 | SE 00 — Setup & Tooling | 01 | Dev Environment | **Completed** |
 | SE 00 — Setup & Tooling | 02 | Git & Collaboration | **Completed** |
-| SE 00 — Setup & Tooling | 03 | GPU Setup & Cloud | Not started |
+| SE 00 — Setup & Tooling | 03 | GPU Setup & Cloud | **Completed** |
 | SE 00 — Setup & Tooling | 04 | APIs & Keys | Not started |
 | SE 00 — Setup & Tooling | 05 | Jupyter Notebooks | Not started |
 | SE 00 — Setup & Tooling | 06 | Python Environments | Not started |
@@ -43,6 +43,7 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 |------|--------|------|------|
 | 2026-10-22 | SE 00/01 Dev Environment | Completed | Passed beginner verifier (2/2); installed and tested PyTorch, NumPy, Matplotlib, and Jupyter in `.venv`; successfully ran Hello World in Python, TypeScript, Rust, and Julia; reviewed virtual environments and the four-layer stack. CPU-only PyTorch; CUDA unavailable on current hardware. |
 | 2026-10-23 | SE 00/02 Git & Collaboration | 3/3 | Explained that `git add` stages changes without committing or pushing them, and that branches keep experimental commits on a separate line. |
+| 2026-10-23 | SE 00/03 GPU Setup & Cloud | 3/3 | Explained that CPU workloads use system RAM, CUDA selects an available NVIDIA GPU, GPU timing requires synchronization, and fp16 needs about 2 bytes per parameter before training overhead. |
 
 ## Review queue
 <empty for now; learn adds lessons the quizzes flag>
