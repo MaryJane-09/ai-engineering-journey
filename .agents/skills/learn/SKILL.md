@@ -178,6 +178,20 @@ Update `LEARNING.md`:
 - Append one row to Progress log: date, `<phase>/<lesson>`, score, and a
   one-line note (something the learner struggled with or said — useful for
   the next warm-up).
+- In the learner's repository, create or update that lesson's folder with
+  `experiment.md`, `notes.md`, and `reflection.md`:
+  - `experiment.md` records the concrete lesson exercise and follow-up task,
+    procedure or run command, and observed result. Mark follow-up work pending
+    until the learner brings back evidence; then record what they actually
+    observed.
+  - `notes.md` holds concise lesson notes, key concepts, and links to the
+    official source. Do not copy the full course lesson.
+  - `reflection.md` records the learner's own reflection or a faithful concise
+    summary, plus unresolved questions. Never invent a reflection or claim an
+    experiment ran without learner evidence.
+- Keep `LEARNING.md` as the progress index and link its between-lesson task to
+  `experiment.md`. Add a short `README.md` index only when it helps navigate
+  the lesson folder.
 - Score below 70%: add the lesson to the Review queue with the missed topic.
 - Last lesson of a phase completed: set the phase Status to `Done` and
   suggest `check-understanding <phase>` for the full phase quiz, rendered with
@@ -186,8 +200,26 @@ Update `LEARNING.md`:
 If there is no LEARNING.md (learner declined setup), skip silently — never
 nag about it after Step 0.
 
+After every lesson, assign a small follow-up task set for work between
+lessons:
+
+- Include one concrete experiment or practice task tied to the lesson. Give
+  the learner a clear action, a run command or procedure, and the evidence to
+  bring back. For conceptual lessons, use a small prediction, comparison, or
+  worked example instead of inventing a coding task.
+- Include one reflection prompt based on what the learner observed or found
+  difficult.
+- Ask for a notes or artifact update when the experiment produces a useful
+  result, correction, or reusable insight. Do not force duplicate notes when
+  the existing lesson note already captures the result.
+
+Keep the tasks achievable before the next lesson. Do not claim an experiment,
+reflection, or notes update is complete until the learner provides evidence.
+
 ## Step 5 — Close
 
-Two lines only: what they can now build or explain that they could not an
-hour ago, and the next lesson's title as a hook ("Next: attention — why
-'the cat sat on the mat' needs 36 dot products").
+Close with a concise statement of what they can now build or explain, the next
+lesson's title as a hook ("Next: attention — why 'the cat sat on the mat'
+needs 36 dot products"), and the follow-up tasks from Step 4. Make the task
+list clear enough to complete without guessing; ask the learner to bring the
+result or reflection to the next session.

@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This repository tracks one learner's AI engineering journey; it is not the upstream course implementation. `LEARNING.md` is the progress record, including the selected roadmap, assessment results, current lesson, and review queue. `README.md` describes the repository. `skills-lock.json` records installed course skills and their upstream source. Add lesson notes, experiments, code, and project artifacts in clearly named directories as they are created; keep generated or private credentials out of version control. The upstream course's `phases/` tree is not currently part of this checkout.
+This repository tracks one learner's AI engineering journey; it is not the upstream course implementation. `LEARNING.md` is the progress record, including the selected roadmap, assessment results, current lesson, and review queue. `README.md` describes the repository. `skills-lock.json` records installed course skills and their upstream source. The local `phases/phase-00/` folders hold learner-created lesson artifacts, not the upstream course files. For each lesson, keep `experiment.md`, `notes.md`, and `reflection.md` in its lesson folder; add runnable notebooks or code there as useful, and use `README.md` as an index when needed. Keep generated or private credentials out of version control. The upstream course's `phases/` tree is not part of this checkout.
 
 ## Build, Test, and Development Commands
 
