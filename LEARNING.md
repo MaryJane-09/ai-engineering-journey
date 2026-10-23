@@ -41,7 +41,7 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 ## Progress log
 | Date | Lesson | Quiz | Note |
 |------|--------|------|------|
-| 2026-10-22 | SE 00/01 Dev Environment | Completed | Passed beginner verifier (2/2); installed and tested PyTorch, NumPy, Matplotlib, and Jupyter in `.venv`; successfully ran Hello World in Python, TypeScript, Rust, and Julia; reviewed virtual environments and the four-layer stack. CPU-only PyTorch; CUDA unavailable on current hardware. |
+| 2026-10-22 | SE 00/01 Dev Environment | — | Passed beginner verifier (2/2); installed and tested PyTorch, NumPy, Matplotlib, and Jupyter in `.venv`; successfully ran Hello World in Python, TypeScript, Rust, and Julia; reviewed virtual environments and the four-layer stack. CPU-only PyTorch; CUDA unavailable on current hardware. |
 | 2026-10-23 | SE 00/02 Git & Collaboration | 3/3 | Explained that `git add` stages changes without committing or pushing them, and that branches keep experimental commits on a separate line. |
 | 2026-10-23 | SE 00/03 GPU Setup & Cloud | 3/3 | Explained that CPU workloads use system RAM, CUDA selects an available NVIDIA GPU, GPU timing requires synchronization, and fp16 needs about 2 bytes per parameter before training overhead. |
 | 2026-10-23 | SE 00/04 APIs & Keys | 3/3 | Explained API key purpose, `.env` loading and ignore rules, what the SDK handles, 401 errors, and 429 rate limits. Created the troubleshooting artifact; live API call deferred because it requires separate API billing. |
