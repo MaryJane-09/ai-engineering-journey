@@ -20,11 +20,11 @@ Study rule: follow every phase and lesson in the published order, starting at SE
 Phases, in official order: SE 00 — Setup & Tooling; 01 — Math Foundations; 02 — ML Fundamentals; 03 — Deep Learning Core; 04 — Computer Vision; 05 — NLP; 06 — Speech & Audio; 07 — Transformers; 08 — Generative AI; 09 — Reinforcement Learning; 10 — LLMs from Scratch; 11 — LLM Engineering; 12 — Multimodal; 13 — Tools & Protocols; 14 — Agent Engineering; 15 — Autonomous Systems; 16 — Multi-Agent & Swarms; 17 — Infrastructure & Production; 18 — Ethics & Alignment; 19 — Capstone Projects.
 
 ### Lesson order and progress
-Only the complete SE 00 lesson list is recorded here so far; later phase lesson titles will be added from the official source as each phase is reached. No lesson is complete yet.
+Only the complete SE 00 lesson list is recorded here so far; later phase lesson titles will be added from the official source as each phase is reached.
 
 | Phase | # | Official lesson | Status |
 |-------|---:|----------------|--------|
-| SE 00 — Setup & Tooling | 01 | Dev Environment | **Current** |
+| SE 00 — Setup & Tooling | 01 | Dev Environment | **Completed** |
 | SE 00 — Setup & Tooling | 02 | Git & Collaboration | Not started |
 | SE 00 — Setup & Tooling | 03 | GPU Setup & Cloud | Not started |
 | SE 00 — Setup & Tooling | 04 | APIs & Keys | Not started |
@@ -41,7 +41,8 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 ## Progress log
 | Date | Lesson | Quiz | Note |
 |------|--------|------|------|
-| 2026-10-22 | SE 00/01 Dev Environment | In progress | Began official lesson; no assessment or completion recorded yet. |
+|2026-10-22 | SE 00/01 Dev Environment | Completed | Passed beginner verifier (2/2); installed and tested PyTorch, NumPy, Matplotlib, and Jupyter in `.venv`; successfully ran Hello World in Python, TypeScript, Rust, and Julia; reviewed virtual environments and the four-layer stack. CPU-only PyTorch; CUDA unavailable on current hardware. |
+
 
 ## Review queue
 <empty for now; learn adds lessons the quizzes flag>
