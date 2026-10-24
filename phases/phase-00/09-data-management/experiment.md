@@ -14,9 +14,21 @@ python3 -c 'import random; rows=list(range(20)); random.Random(42).shuffle(rows)
 
 The seed is `42`; the slices make 14 training rows, 3 validation rows, and 3 test rows. Compare the printed rows across both runs.
 
-## Evidence
+## First observed result
 
-**Pending.** Bring back the split sizes and confirm whether the same rows appeared in each split on both runs.
+The learner's first run produced sizes `14`, `3`, and `3`, with these row IDs:
+
+```text
+train:      [19, 5, 14, 4, 9, 13, 15, 18, 6, 12, 17, 10, 1, 11]
+validation: [2, 16, 7]
+test:       [8, 0, 3]
+```
+
+## Second observed result
+
+The second run produced sizes `14`, `3`, and `3`, with the same train, validation, and test row IDs as the first run.
+
+**Status: Complete.** The repeated output confirms the fixed seed reproduces the partition.
 
 ## Reflection prompt
 
