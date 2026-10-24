@@ -1,6 +1,6 @@
 # SE 00 Lesson 08: Editor Setup
 
-These notes summarize the [official Editor Setup lesson](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/00-setup-and-tooling/08-editor-setup). The extension and settings exercise is pending; see [`experiment.md`](experiment.md).
+These notes summarize the [official Editor Setup lesson](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/00-setup-and-tooling/08-editor-setup). The exercise is complete; see [`experiment.md`](experiment.md) and the retained [`editor-check.py`](editor-check.py) artifact.
 
 ## Useful editor support
 
