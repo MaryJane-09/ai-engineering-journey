@@ -2,7 +2,7 @@
 
 ## Learner reflection
 
-The learner explained that redirecting with `> output.log 2>&1` captures both normal output and errors. Their grep/awk pipeline extracted the loss values `0.8`, `0.4`, and `0.2`. They were unsure about tmux and chose an incorrect SSH port-forwarding command.
+The learner explained that redirecting with `> output.log 2>&1` captures both normal output and errors. Their grep/awk pipeline extracted the loss values `0.8`, `0.4`, and `0.2`. They summarized `>` as sending output to a file and `|` as passing output to another command. They were unsure about tmux and chose an incorrect SSH port-forwarding command.
 
 ## Takeaway
 
