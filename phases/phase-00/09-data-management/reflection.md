@@ -8,6 +8,8 @@ The learner connected a fixed seed with reproducible splits and identified DVC a
 
 A fixed seed repeats the partition. A held-out test split measures the model after training and tuning are complete.
 
+The learner ran the same seeded split twice and observed that all row IDs stayed in the same groups.
+
 ## Question to revisit
 
 Why is Parquet usually a better storage format for ML datasets than CSV?
