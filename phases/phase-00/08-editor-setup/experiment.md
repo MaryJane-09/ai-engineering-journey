@@ -33,25 +33,14 @@ Open **Preferences: Open User Settings (JSON)** from the Command Palette and add
 
 ## Check the setup
 
-Open a scratch Python file, enter the code below, and save it:
+Open [`editor-check.py`](editor-check.py) in VS Code. Its `greet` parameter is annotated as `str`, while the call passes the integer `42`; Pylance should flag the mismatch. To check formatting, temporarily change the call to `greet( 42 )` and save; Black should remove the extra spaces.
 
-```python
-def greet(name: str) -> None:
-    print(name)
+Run it from the repository root with `python3 phases/phase-00/08-editor-setup/editor-check.py`; it prints `42`. The type annotation is for editor-time checking and does not stop Python from running the call.
 
-greet(42)
-```
-
-Pylance should flag the integer argument where a string is expected. To check formatting, change the last line to `greet( 42 )` and save; Black should remove the extra spaces.
-
-## Observed result so far
-
-The learner installed Remote SSH, Black Formatter, and Ruff. Running `python3 code_1.py` printed `42`. This confirms Python executed the function; Python type annotations do not enforce argument types at runtime.
-
-Pylance reported that argument `Literal[42]` cannot be assigned to the `str` parameter `name`. This confirms the editor detected the type mismatch before execution.
+To repeat the formatting check, temporarily change the call to `greet( 42 )`, save, and verify Black changes it back to `greet(42)`.
 
 ## Observed result
 
 Pylance showed the expected type warning: `Literal[42]` could not be assigned to the `str` parameter. After saving with Black, the call changed from `greet(  42  )` to `greet(42)`. The learner also ran the function with Python and observed `42`.
 
-**Status: Complete.** The scratch test confirmed editor-time type diagnostics and format-on-save.
+**Status: Complete.** The retained script reproduces the type warning; the format-on-save observation is recorded above.
