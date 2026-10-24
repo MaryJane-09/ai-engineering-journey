@@ -17,4 +17,4 @@ Pylance uses the Language Server Protocol (LSP) to provide completions, type inf
 
 ## Learner evidence and review
 
-The learner correctly stated that code runs on the remote machine when using Remote SSH. They installed Remote SSH, Black Formatter, and Ruff, and ran the scratch function with Python; it printed `42`. Python type annotations are not runtime checks, so that output does not establish whether Pylance showed an editor warning. The learner was unsure why notebook output scrolling is useful and what basic type checking catches. Quiz score: 1/3; review those two settings and their purposes.
+The learner correctly stated that code runs on the remote machine when using Remote SSH. They installed Remote SSH, Black Formatter, and Ruff, and ran the scratch function with Python; it printed `42`. Pylance then flagged `Literal[42]` as incompatible with the parameter type `str`, demonstrating an editor-time type diagnostic. Black formatting on save remains unverified. The learner was unsure why notebook output scrolling is useful and what basic type checking catches. Quiz score: 1/3; review those two settings and their purposes.
