@@ -48,6 +48,8 @@ Pylance should flag the integer argument where a string is expected. To check fo
 
 The learner installed Remote SSH, Black Formatter, and Ruff. Running `python3 code_1.py` printed `42`. This confirms Python executed the function; Python type annotations do not enforce argument types at runtime.
 
+Pylance reported that argument `Literal[42]` cannot be assigned to the `str` parameter `name`. This confirms the editor detected the type mismatch before execution.
+
 ## Remaining evidence
 
-**Pending.** In VS Code, report whether Pylance showed the type warning and whether saving formatted the call. The editor checks have not yet been confirmed.
+**Partially complete.** Pylance showed the expected type warning. The scratch file still contains extra spaces in the call, so Black formatting on save has not yet been confirmed. Save the file after selecting Black Formatter as the Python default formatter, then check whether it becomes `greet(42)`.
