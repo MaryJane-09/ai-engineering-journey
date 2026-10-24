@@ -18,14 +18,6 @@ Docker may need to download the Alpine image the first time. `--rm` removes the 
 
 The learner ran the command, but Docker returned `permission denied` while connecting to `/var/run/docker.sock`. The daemon rejected the request before starting the container, so this attempt did not verify the volume mount.
 
-## Troubleshooting and remaining evidence
+## Result
 
-On Linux, if the learner has sudo access, retry the same command with `sudo` before `docker`:
-
-```bash
-sudo docker run --rm -v "$PWD:/workspace" alpine:3.20 ls /workspace
-```
-
-Otherwise, an administrator can grant the account Docker daemon access (commonly through the `docker` group), after which the learner must log out and back in. Docker daemon access is highly privileged. Once the command runs, bring back its output and identify which path is on the host and which is inside the container.
-
-**Pending.** The experiment is not complete until Docker lists the mounted repository contents.
+Docker returned `permission denied` while connecting to `/var/run/docker.sock`, before starting a container. The learner reports that Docker access cannot be granted in this environment. Therefore, the volume mount was not tested and this hands-on exercise is **unavailable here**. The conceptual mapping remains: `$PWD` is the host path, and `/workspace` is the container path.
