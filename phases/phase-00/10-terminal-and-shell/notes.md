@@ -26,4 +26,4 @@ The terminal is the interface where you type commands. The shell (such as `zsh` 
 
 ## Learner evidence and review
 
-The learner correctly explained that `> output.log 2>&1` captures both normal output and errors. Their log pipeline printed `0.8`, `0.4`, and `0.2`. They were unsure about tmux's advantage and selected the wrong command for SSH port forwarding. Quiz score: 2/3; review tmux detach/reattach and `ssh -L`.
+The learner correctly explained that `> output.log 2>&1` captures both normal output and errors. Their log pipeline printed `0.8`, `0.4`, and `0.2`. They then summarized the distinction: `>` redirects output to a file, while `|` sends the first command's output to the next command as input. They were unsure about tmux's advantage and selected the wrong command for SSH port forwarding. Quiz score: 2/3; review tmux detach/reattach and `ssh -L`.
