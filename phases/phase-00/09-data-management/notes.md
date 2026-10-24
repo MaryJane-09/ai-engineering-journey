@@ -31,4 +31,4 @@ Do not commit downloaded model weights and large datasets as ordinary Git blobs.
 
 ## Learner evidence and review
 
-The learner linked fixed seeds to reproducible splits and identified DVC as useful for reproducing experiments across machines. After clarification, they explained: “The seed makes the shuffle repeatable and test is for so it can give you a fair final check.” Review Parquet versus CSV. Quiz score: 2/3.
+The learner linked fixed seeds to reproducible splits and identified DVC as useful for reproducing experiments across machines. After clarification, they explained: “The seed makes the shuffle repeatable and test is for so it can give you a fair final check.” They ran the 20-row split twice and observed identical 14/3/3 sizes and identical row groups. Review Parquet versus CSV. Quiz score: 2/3.
