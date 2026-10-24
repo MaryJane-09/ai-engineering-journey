@@ -20,9 +20,9 @@ The NVIDIA Container Toolkit exposes an NVIDIA GPU from the host to a container,
 
 Compose describes and runs multiple services from YAML. Compose places services on a shared network, where one service can reach another by its service name. For example, an `ai-dev` service can connect to Qdrant at `http://qdrant:6333`; it does not need the host machine's IP address.
 
-## Troubleshooting daemon access
+## Environment limitation
 
-If Docker reports `permission denied` for `/var/run/docker.sock`, the current user cannot access the Docker daemon. The container has not started, so the error does not indicate a problem with the image or volume mount. On Linux, a user with sudo access can test a one-off command with `sudo docker`; otherwise, an administrator must grant Docker access and the user must start a new login session. Access to the Docker daemon is highly privileged.
+The learner's Docker command was rejected with `permission denied` for `/var/run/docker.sock` before the container started. Docker access cannot be granted in this environment, so the volume exercise is unavailable here. This is an access limitation, not evidence of a problem with the image or volume syntax. The mount maps a host directory on the left to a path inside the container on the right.
 
 ## Learner evidence and review
 
