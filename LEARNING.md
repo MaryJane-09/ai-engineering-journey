@@ -33,7 +33,7 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 | SE 00 — Setup & Tooling | 07 | Docker for AI | **Completed** |
 | SE 00 — Setup & Tooling | 08 | Editor Setup | **Completed** |
 | SE 00 — Setup & Tooling | 09 | Data Management | **Completed** |
-| SE 00 — Setup & Tooling | 10 | Terminal & Shell | Not started |
+| SE 00 — Setup & Tooling | 10 | Terminal & Shell | **Completed** |
 | SE 00 — Setup & Tooling | 11 | Linux for AI | Not started |
 | SE 00 — Setup & Tooling | 12 | Debugging & Profiling | Not started |
 | SE 00 — Setup & Tooling | 13 | Python for AI Engineering | Not started |
@@ -50,6 +50,7 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 | 2026-10-24 | [SE 00/07 Docker for AI](phases/phase-00/07-docker-for-ai/notes.md) | 0/3 | Reviewed image versus container, host-to-container volume mounts, NVIDIA GPU access, and Compose service-name networking. Asked for explicit explanation of the mount paths and requested concise lessons. |
 | 2026-10-24 | [SE 00/08 Editor Setup](phases/phase-00/08-editor-setup/notes.md) | 1/3 | Correctly identified that Remote SSH runs code on the remote machine. Installed Remote SSH, Black Formatter, and Ruff; Python printed `42`, Pylance flagged `Literal[42]` as incompatible with `str`, and saving with Black changed the call to `greet(42)`. |
 | 2026-10-24 | [SE 00/09 Data Management](phases/phase-00/09-data-management/notes.md) | 2/3 | Correctly identified that a fixed seed makes splits reproducible and that DVC supports versioned data for reproducible experiments. Clarified that a separate test split is for final evaluation; review Parquet's advantages over CSV. |
+| 2026-10-24 | [SE 00/10 Terminal & Shell](phases/phase-00/10-terminal-and-shell/notes.md) | 2/3 | Explained that `> output.log 2>&1` captures both normal output and errors. `tmux` is unavailable in this environment; review detach/reattach sessions and SSH local port forwarding. |
 
 ## Between-lesson practice
 
@@ -60,9 +61,11 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 | SE 00/07 Docker for AI | See `phases/phase-00/07-docker-for-ai/experiment.md`: run a temporary container with the repository mounted at `/workspace`, then list the mounted files. | Docker denied access to `/var/run/docker.sock` before a container started. The learner reports daemon access cannot be granted in this environment, so the volume mount cannot be tested here. | **Unavailable** |
 | SE 00/08 Editor Setup | See `phases/phase-00/08-editor-setup/experiment.md`: enable the listed Python/notebook settings and check Pylance and Black in a scratch file. | Python printed `42`; Pylance flagged the integer argument as incompatible with `str`; saving with Black changed the call to `greet(42)`. | **Complete** |
 | SE 00/09 Data Management | See `phases/phase-00/09-data-management/experiment.md`: create reproducible 70/15/15 splits from 20 rows with a fixed seed; run it twice and compare the split outputs. | Both runs produced sizes 14/3/3 and identical row groups: train `[19, 5, 14, 4, 9, 13, 15, 18, 6, 12, 17, 10, 1, 11]`, validation `[2, 16, 7]`, test `[8, 0, 3]`. | **Complete** |
+| SE 00/10 Terminal & Shell | See `phases/phase-00/10-terminal-and-shell/experiment.md`: write a small fake training log, then use `grep` and `awk` through a pipe to extract loss values. | The learner got `0.8`, `0.4`, and `0.2`. A one-sentence explanation of how `>` and `|` differ is still due. | **In progress** |
 
 ## Review queue
 - SE 00/06 Python Environments — review how to identify the active virtual environment, why pip and Conda can conflict, and how to compare PyTorch's CUDA build with driver support.
 - SE 00/07 Docker for AI — review how volumes persist host data, how the NVIDIA Container Toolkit exposes the host GPU, and how Compose service names resolve on its shared network.
 - SE 00/08 Editor Setup — review notebook output scrolling and what basic type checking catches before code runs.
 - SE 00/09 Data Management — review why Parquet is usually smaller and faster to query than CSV.
+- SE 00/10 Terminal & Shell — review how to detach and reattach to `tmux`, and how `ssh -L` forwards a remote port to localhost.
