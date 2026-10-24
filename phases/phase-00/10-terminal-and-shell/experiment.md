@@ -35,4 +35,6 @@ The learner's pipeline printed:
 
 ## Remaining evidence
 
-The output check is complete. Explain in one sentence how `>` differs from `|` to complete the exercise.
+The learner explained that `>` redirects command output to a file, while `|` sends one command's output to the next command as input.
+
+**Status: Complete.** The log values were extracted, and the learner distinguished file redirection from a command pipeline.
