@@ -31,7 +31,7 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 | SE 00 — Setup & Tooling | 05 | Jupyter Notebooks | **Completed** |
 | SE 00 — Setup & Tooling | 06 | Python Environments | **Completed** |
 | SE 00 — Setup & Tooling | 07 | Docker for AI | **Completed** |
-| SE 00 — Setup & Tooling | 08 | Editor Setup | Not started |
+| SE 00 — Setup & Tooling | 08 | Editor Setup | **Completed** |
 | SE 00 — Setup & Tooling | 09 | Data Management | Not started |
 | SE 00 — Setup & Tooling | 10 | Terminal & Shell | Not started |
 | SE 00 — Setup & Tooling | 11 | Linux for AI | Not started |
@@ -48,6 +48,7 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 | 2026-10-23 | [SE 00/05 Jupyter Notebooks](phases/phase-00/05-jupyter-notebooks/notes.md) | 3/3 | Initially unsure why notebook cells depend on execution order; then explained that a later cell cannot use a variable until it exists, and that restarting clears stale kernel state. Ran `20 * 9 / 5 + 32` in Jupyter and got `68.0`; chose `%timeit` for short comparisons and scripts for reusable code. |
 | 2026-10-24 | [SE 00/06 Python Environments](phases/phase-00/06-python-environments/notes.md) | 0/3 | Recognized that a lockfile preserves dependencies and that separate `.venv` folders isolate packages; reviewed how to confirm the active interpreter, why pip and Conda can conflict, and how to check CUDA compatibility. Requested shorter lessons with key questions and explicit explanations in the notes. |
 | 2026-10-24 | [SE 00/07 Docker for AI](phases/phase-00/07-docker-for-ai/notes.md) | 0/3 | Reviewed image versus container, host-to-container volume mounts, NVIDIA GPU access, and Compose service-name networking. Asked for explicit explanation of the mount paths and requested concise lessons. |
+| 2026-10-24 | [SE 00/08 Editor Setup](phases/phase-00/08-editor-setup/notes.md) | 1/3 | Correctly identified that Remote SSH runs code on the remote machine. Installed Remote SSH, Black Formatter, and Ruff, then ran the scratch function and saw `42`; the Pylance warning and format-on-save behavior are still unverified. |
 
 ## Between-lesson practice
 
@@ -56,7 +57,9 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 | SE 00/05 Jupyter Notebooks | See `phases/phase-00/05-jupyter-notebooks/experiment.md`: add a Markdown cell and assignment/conversion cells, run all; restart and run the conversion first; then rerun from the top. | The learner saw `NameError: name 'temperature_c' is not defined` when running the conversion first, then got `68.0` after running from the top. They explained that the assignment cell creates the variable in kernel memory before the conversion cell uses it. | **Complete** |
 | SE 00/06 Python Environments | See `phases/phase-00/06-python-environments/experiment.md`: create a second environment, install a pinned NumPy version, and compare its version with the repository `.venv`. | The learner installed NumPy 1.26.4 in `.venv-a`; the repository `.venv` reports 2.5.4. The interpreter paths point to their separate environments. | **Complete** |
 | SE 00/07 Docker for AI | See `phases/phase-00/07-docker-for-ai/experiment.md`: run a temporary container with the repository mounted at `/workspace`, then list the mounted files. | Bring back the command output and explain which path is on the host and which is inside the container. | **Pending** |
+| SE 00/08 Editor Setup | See `phases/phase-00/08-editor-setup/experiment.md`: enable the listed Python/notebook settings and check Pylance and Black in a scratch file. | Report whether Pylance flags the type mismatch and whether saving formats the call. Terminal execution returned `42`; editor checks remain. | **Pending** |
 
 ## Review queue
 - SE 00/06 Python Environments — review how to identify the active virtual environment, why pip and Conda can conflict, and how to compare PyTorch's CUDA build with driver support.
 - SE 00/07 Docker for AI — review how volumes persist host data, how the NVIDIA Container Toolkit exposes the host GPU, and how Compose service names resolve on its shared network.
+- SE 00/08 Editor Setup — review notebook output scrolling and what basic type checking catches before code runs.
