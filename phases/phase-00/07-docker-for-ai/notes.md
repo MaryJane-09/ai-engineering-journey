@@ -20,6 +20,10 @@ The NVIDIA Container Toolkit exposes an NVIDIA GPU from the host to a container,
 
 Compose describes and runs multiple services from YAML. Compose places services on a shared network, where one service can reach another by its service name. For example, an `ai-dev` service can connect to Qdrant at `http://qdrant:6333`; it does not need the host machine's IP address.
 
+## Troubleshooting daemon access
+
+If Docker reports `permission denied` for `/var/run/docker.sock`, the current user cannot access the Docker daemon. The container has not started, so the error does not indicate a problem with the image or volume mount. On Linux, a user with sudo access can test a one-off command with `sudo docker`; otherwise, an administrator must grant Docker access and the user must start a new login session. Access to the Docker daemon is highly privileged.
+
 ## Learner evidence and review
 
 The learner asked for an explanation of the two sides of the volume mount and did not know the answers to the three post-lesson checks. Review volume persistence, NVIDIA GPU exposure, and Compose DNS by service name. Quiz score: 0/3.
