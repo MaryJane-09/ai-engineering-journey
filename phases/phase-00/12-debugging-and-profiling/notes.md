@@ -22,4 +22,4 @@ A profiler measures resource use, such as execution time and memory allocation. 
 
 ## Learner evidence and review
 
-The learner correctly identified the data loader as the first place to investigate when profiling shows data loading dominates, and chose gradient checks plus `breakpoint()` for NaN loss. They missed the data-leakage and common time-profile questions. Quiz score: 1/3.
+The learner correctly identified the data loader as the first place to investigate when profiling shows data loading dominates, and chose gradient checks plus `breakpoint()` for NaN loss. They ran the `cProfile` exercise; `time.sleep` took 0.100 seconds of a 0.101-second profile. They asked what profiling does not prove; the tutor clarified that measuring resource use does not verify output correctness or model generalization. They missed the data-leakage and common time-profile questions. Quiz score: 1/3.
