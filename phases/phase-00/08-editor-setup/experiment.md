@@ -50,6 +50,8 @@ The learner installed Remote SSH, Black Formatter, and Ruff. Running `python3 co
 
 Pylance reported that argument `Literal[42]` cannot be assigned to the `str` parameter `name`. This confirms the editor detected the type mismatch before execution.
 
-## Remaining evidence
+## Observed result
 
-**Partially complete.** Pylance showed the expected type warning. The scratch file still contains extra spaces in the call, so Black formatting on save has not yet been confirmed. Save the file after selecting Black Formatter as the Python default formatter, then check whether it becomes `greet(42)`.
+Pylance showed the expected type warning: `Literal[42]` could not be assigned to the `str` parameter. After saving with Black, the call changed from `greet(  42  )` to `greet(42)`. The learner also ran the function with Python and observed `42`.
+
+**Status: Complete.** The scratch test confirmed editor-time type diagnostics and format-on-save.
