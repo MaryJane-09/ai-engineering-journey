@@ -35,7 +35,7 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 | SE 00 — Setup & Tooling | 09 | Data Management | **Completed** |
 | SE 00 — Setup & Tooling | 10 | Terminal & Shell | **Completed** |
 | SE 00 — Setup & Tooling | 11 | Linux for AI | **Completed** |
-| SE 00 — Setup & Tooling | 12 | Debugging & Profiling | Not started |
+| SE 00 — Setup & Tooling | 12 | Debugging & Profiling | **Completed** |
 | SE 00 — Setup & Tooling | 13 | Python for AI Engineering | Not started |
 
 ## Progress log
@@ -52,6 +52,7 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 | 2026-10-24 | [SE 00/09 Data Management](phases/phase-00/09-data-management/notes.md) | 2/3 | Correctly identified that a fixed seed makes splits reproducible and that DVC supports versioned data for reproducible experiments. Clarified that a separate test split is for final evaluation; review Parquet's advantages over CSV. |
 | 2026-10-24 | [SE 00/10 Terminal & Shell](phases/phase-00/10-terminal-and-shell/notes.md) | 2/3 | Explained that `> output.log 2>&1` captures both normal output and errors. `tmux` is unavailable in this environment; review detach/reattach sessions and SSH local port forwarding. |
 | 2026-10-24 | [SE 00/11 Linux for AI](phases/phase-00/11-linux-for-ai/notes.md) | 0/3; repeated items 3/3; fresh retake 1/3 | On the repeated questions, corrected all three initial misses. In the fresh retake, answered `rsync` correctly; then used `chmod +x` to make a temporary script executable. Review `~` for the home directory, the `apt update`/`apt install` sequence, `du`, and `sed -i`. |
+| 2026-10-24 | [SE 00/12 Debugging & Profiling](phases/phase-00/12-debugging-and-profiling/notes.md) | 1/3 | Correctly identified the data loader as the place to investigate when profiling shows data loading dominates, and chose gradient checks plus `breakpoint()` for NaN loss. Review suspiciously high test accuracy and how to read time profiles. |
 
 ## Between-lesson practice
 
@@ -64,6 +65,7 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 | SE 00/09 Data Management | See `phases/phase-00/09-data-management/experiment.md`: create reproducible 70/15/15 splits from 20 rows with a fixed seed; run it twice and compare the split outputs. | Both runs produced sizes 14/3/3 and identical row groups: train `[19, 5, 14, 4, 9, 13, 15, 18, 6, 12, 17, 10, 1, 11]`, validation `[2, 16, 7]`, test `[8, 0, 3]`. | **Complete** |
 | SE 00/10 Terminal & Shell | See `phases/phase-00/10-terminal-and-shell/experiment.md`: write a small fake training log, then use `grep` and `awk` through a pipe to extract loss values. | The learner got `0.8`, `0.4`, and `0.2`, then explained: `>` redirects output to a file; `|` sends one command's output as input to the next. | **Complete** |
 | SE 00/11 Linux for AI | See `phases/phase-00/11-linux-for-ai/experiment.md`: create a temporary shell script, observe it fail without execute permission, add the bit with `chmod +x`, then run it. | Permissions changed from `-rw-rw-r--` to `-rwxrwxr-x`; the initial run was denied, and the script printed `permissions-ok` after `chmod +x`. | **Complete** |
+| SE 00/12 Debugging & Profiling | See `phases/phase-00/12-debugging-and-profiling/experiment.md`: profile a short operation and a deliberately slow step with `cProfile`. | Identify the slowest call in cumulative time and explain what profiling does—and does not—tell you. | **Pending** |
 
 ## Review queue
 - SE 00/06 Python Environments — review how to identify the active virtual environment, why pip and Conda can conflict, and how to compare PyTorch's CUDA build with driver support.
@@ -72,3 +74,4 @@ Only the complete SE 00 lesson list is recorded here so far; later phase lesson 
 - SE 00/09 Data Management — review why Parquet is usually smaller and faster to query than CSV.
 - SE 00/10 Terminal & Shell — review how to detach and reattach to `tmux`, and how `ssh -L` forwards a remote port to localhost.
 - SE 00/11 Linux for AI — review `~` for the current user's home, the `sudo apt update` then `sudo apt install` sequence, `du` directory sizes, and macOS vs. Linux `sed -i` syntax. The `chmod +x` exercise is complete.
+- SE 00/12 Debugging & Profiling — review data leakage as a possible cause of suspiciously high test accuracy, and use profiling results to locate time bottlenecks.
