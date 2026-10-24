@@ -27,4 +27,4 @@ macOS and Linux have different `sed -i` syntax: macOS requires an empty string a
 
 ## Learner evidence and review
 
-The initial quiz score was 0/3. On a retake with the original questions repeated, the learner answered all three correctly. On a fresh retake, they answered the `rsync` question correctly but missed `~` (home directory) and the `apt update`/`apt install` sequence. Review those fresh misses and reinforce the original quiz topics: `chmod +x`, `du` for directory sizes, and the macOS/Linux `sed -i` difference.
+The initial quiz score was 0/3. On a retake with the original questions repeated, the learner answered all three correctly. On a fresh retake, they answered the `rsync` question correctly but missed `~` (home directory) and the `apt update`/`apt install` sequence. The learner then observed a temporary script change from `-rw-rw-r--` to `-rwxrwxr-x` after `chmod +x`, followed by successful execution. Review `~`, the apt sequence, `du` directory sizes, and macOS/Linux `sed -i` syntax.
