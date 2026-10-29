@@ -28,3 +28,7 @@ Create an environment with `uv venv` or Python's built-in `python -m venv`. Acti
 ## Learner evidence and review
 
 The learner identified `.venv` as the isolation mechanism and correctly described a lockfile as supporting dependency reuse. The experiment showed NumPy 1.26.4 in `.venv-a` and NumPy 2.5.4 in the repository `.venv`. The learner initially thought installing into a second environment would change the existing environment, and named `python3 --version` as a way to identify the active environment. Review interpreter-path checks, package-manager conflicts, and CUDA compatibility. Quiz score: 0/3.
+
+### Review session
+
+The learner identified `which python` as a way to inspect the active Python executable and correctly used `nvidia-smi` to check NVIDIA driver information. We clarified that `torch.version.cuda` reports the CUDA version PyTorch was built for, not the PyTorch or driver version. We also clarified that Conda and `uv` are separate tools, and that mixing Conda and pip can cause conflicts because Conda may not track pip-installed changes. The interpreter-path command `python -c "import sys; print(sys.executable)"` was reviewed. In a follow-up, the learner explained that Conda may not track a later pip update, which can cause trouble. This review item is complete.
