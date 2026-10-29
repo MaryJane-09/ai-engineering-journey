@@ -1,6 +1,6 @@
 # SE 00 Lesson 09: Data Management
 
-These notes summarize the [official Data Management lesson](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/00-setup-and-tooling/09-data-management). The fixed-seed split exercise is pending; see [`experiment.md`](experiment.md).
+These notes summarize the [official Data Management lesson](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/00-setup-and-tooling/09-data-management). The fixed-seed split exercise is complete; see [`experiment.md`](experiment.md).
 
 ## Loading, caching, and streaming
 
@@ -31,4 +31,4 @@ Do not commit downloaded model weights and large datasets as ordinary Git blobs.
 
 ## Learner evidence and review
 
-The learner linked fixed seeds to reproducible splits and identified DVC as useful for reproducing experiments across machines. After clarification, they explained: “The seed makes the shuffle repeatable and test is for so it can give you a fair final check.” They ran the 20-row split twice and observed identical 14/3/3 sizes and identical row groups. Review Parquet versus CSV. Quiz score: 2/3.
+The learner linked fixed seeds to reproducible splits and identified DVC as useful for reproducing experiments across machines. After clarification, they explained: “The seed makes the shuffle repeatable and test is for so it can give you a fair final check.” They ran the 20-row split twice and observed identical 14/3/3 sizes and identical row groups. In review, they identified Parquet as faster when reading selected columns; we clarified that its columnar layout lets tools skip unneeded columns and compression can reduce data read. Review complete. Quiz score: 2/3.
