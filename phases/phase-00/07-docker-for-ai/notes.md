@@ -20,10 +20,10 @@ The NVIDIA Container Toolkit exposes an NVIDIA GPU from the host to a container,
 
 Compose describes and runs multiple services from YAML. Compose places services on a shared network, where one service can reach another by its service name. For example, an `ai-dev` service can connect to Qdrant at `http://qdrant:6333`; it does not need the host machine's IP address.
 
-## Environment limitation
+## Docker socket access and exercise result
 
-The learner's Docker command was rejected with `permission denied` for `/var/run/docker.sock` before the container started. Docker access cannot be granted in this environment, so the volume exercise is unavailable here. This is an access limitation, not evidence of a problem with the image or volume syntax. The mount maps a host directory on the left to a path inside the container on the right.
+The learner's initial Docker command was rejected with `permission denied` for `/var/run/docker.sock` before the container started. Running the volume exercise with `sudo` succeeded: Docker downloaded `alpine:3.20` and listed the repository files from `/workspace`. The command-line user lacked access to the daemon socket; the image and volume syntax were valid. The mount maps a host directory on the left to a path inside the container on the right. Docker documents that membership in the `docker` group grants root-level privileges, so use `sudo` or review that security tradeoff before changing group membership.
 
 ## Learner evidence and review
 
-The learner asked for an explanation of the two sides of the volume mount and did not know the answers to the three post-lesson checks. Review volume persistence, NVIDIA GPU exposure, and Compose DNS by service name. Quiz score: 0/3.
+The learner asked for an explanation of the two sides of the volume mount; the hands-on run confirmed the repository appeared at `/workspace` inside the container. The learner explained that the files remain because they existed before the container was created; the host directory is mounted into the container, so removing the container does not remove the host files. The learner requested an explanation of GPU access: the host supplies the physical NVIDIA GPU and driver, the NVIDIA Container Toolkit connects Docker to that GPU, `--gpus all` requests that all available GPUs be exposed to the container, and the container image supplies the CUDA libraries its software needs. The learner correctly identified the host as the source of the NVIDIA driver and explained that Compose services use service names as hostnames on their shared network. Docker review complete. Quiz score: 0/3.
