@@ -30,3 +30,18 @@ The learner reported the exact `NameError` traceback and the successful `68.0` r
 ## Further experiment
 
 Compare `%timeit sum(range(100))` with a cell using `%%time` and the same expression. Note which command repeats the expression and which runs the cell once. Bring back the outputs and a sentence on which timing is more useful for this small operation.
+
+**Answer and evidence:** `%timeit` reported:
+
+```text
+1.65 μs ± 332 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+```
+
+The `%%time` cell reported:
+
+```text
+CPU times: user 14 μs, sys: 1 μs, total: 15 μs
+Wall time: 20 μs
+```
+
+`%timeit` repeated the expression to estimate its typical runtime. `%%time` ran the cell once and reported elapsed CPU and wall-clock time. For this short expression, `%timeit` is more useful because repetition reduces the impact of timing noise. The learner also observed that `%%time` must be on its own first line, with the cell's expression below it.
