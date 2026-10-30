@@ -58,3 +58,7 @@ Interpreter path: /home/jane/ai/ai-engineering-journey/.venv/bin/python
 ```
 
 The initial run with the shell's default interpreter failed because PyTorch was unavailable there. Using the repository `.venv` resolved the issue. The output also confirms this environment currently reports no CUDA GPU.
+
+### Editor warning follow-up
+
+The learner later added `# type: ignore` to the PyTorch and NumPy imports because the editor showed import warnings. After selecting `/home/jane/ai/ai-engineering-journey/.venv/bin/python` as the editor interpreter, the warnings disappeared and the learner removed the suppressions. This confirmed the editor had been analyzing the file with the wrong interpreter.
