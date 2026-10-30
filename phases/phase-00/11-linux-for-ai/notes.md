@@ -1,6 +1,6 @@
 # SE 00 Lesson 11: Linux for AI
 
-These notes summarize the [official Linux for AI lesson](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/00-setup-and-tooling/11-linux-for-ai). The temporary script permissions exercise is pending; see [`experiment.md`](experiment.md).
+These notes summarize the [official Linux for AI lesson](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/00-setup-and-tooling/11-linux-for-ai). The temporary script permissions exercise is complete; see [`experiment.md`](experiment.md).
 
 ## Filesystem basics
 
@@ -27,4 +27,4 @@ macOS and Linux have different `sed -i` syntax: macOS requires an empty string a
 
 ## Learner evidence and review
 
-The initial quiz score was 0/3. On a retake with the original questions repeated, the learner answered all three correctly. On a fresh retake, they answered the `rsync` question correctly but missed `~` (home directory) and the `apt update`/`apt install` sequence. The learner then observed a temporary script change from `-rw-rw-r--` to `-rwxrwxr-x` after `chmod +x`, followed by successful execution. Review `~`, the apt sequence, `du` directory sizes, and macOS/Linux `sed -i` syntax.
+The initial quiz score was 0/3. On a retake with the original questions repeated, the learner answered all three correctly. On a fresh retake, they answered the `rsync` question correctly but missed `~` (home directory) and the `apt update`/`apt install` sequence. The learner then observed a temporary script change from `-rw-rw-r--` to `-rwxrwxr-x` after `chmod +x`, followed by successful execution. In review, the learner identified `~` as the home directory, gave `sudo apt update` followed by `sudo apt install curl`, learned that `du -sh` uses `-s` for a summary and `-h` for human-readable units, and identified the macOS `sed -i ''` syntax. Review complete.
