@@ -66,6 +66,7 @@ Phase status: **SE 00 — Setup & Tooling: Done**.
 | 2026-10-30 | [SE 00/12 Debugging & Profiling](phases/phase-00/12-debugging-and-profiling/notes.md) | Review complete | Identified test-file access as a possible data-leakage source and explained that a time profile locates slow functions but does not verify output correctness. |
 | 2026-10-24 | [SE 00/13 Python for AI Engineering](phases/phase-00/13-python-for-ai-engineering/notes.md) | 1/2 | Correctly predicted that a mutable default list is shared across calls. The normalization comparison showed train-only statistics `(2.0, 0.816...)` versus combined train/test statistics `(26.5, 42.441...)`; the learner explained that using test data would leak information. |
 | 2026-10-30 | [SE 00/13 Python for AI Engineering](phases/phase-00/13-python-for-ai-engineering/notes.md) | Review complete | Explained that normalization mean and standard deviation should be calculated on training data and reused unchanged for validation and test to keep those sets independent. |
+| 2026-10-30 | SE 00 — Setup & Tooling phase quiz | 7/8 — Mastered | Correct on environment layer order, GPU timing, lockfiles, Git workflow, Docker volumes, profiling bottlenecks, and train-only normalization. Review streaming versus Parquet: streaming yields rows on demand; Parquet is a compressed columnar storage format. |
 
 ## Between-lesson practice
 
