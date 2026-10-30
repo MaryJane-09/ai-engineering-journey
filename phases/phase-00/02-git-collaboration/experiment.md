@@ -6,8 +6,21 @@ The learner scored **3/3** and explained that `git add` stages changes without c
 
 ## Practice experiment
 
-In a disposable practice repository, create a branch, make one small change, and inspect `git status` and `git log --oneline` before and after committing. Do not push. Record which command changed the working tree, which created the local snapshot, and which branch name points to the new commit.
+### Question 2 — Branch workflow
+
+Use a disposable repository at `/tmp/git-practice`. Initialize a `main` branch, configure a local practice-only Git name and email if needed, create and commit `hello.py`, then create an `experiment` branch, change the file, and commit again. Inspect `git status` and `git log --oneline --all --decorate --graph`. Do not push this temporary repository.
+
+In your answer, include the command sequence and explain which commit each branch points to and whether the experiment commit changed `main`.
+
+**Answer and evidence:** The learner ran the branch exercise and reported:
+
+```text
+* bc409f3 (experiment) add experiment line
+* 70a6d0f (HEAD -> main) add hello script
+```
+
+The learner explained that `experiment` contains the experiment commit. `main` still points to `70a6d0f`; the branch commit does not move `main` unless the branches are merged. The temporary repository was not pushed.
 
 ## Status
 
-Quiz evidence is recorded. This hands-on branch experiment has not been reported as completed.
+Quiz evidence and this hands-on branch experiment are recorded as complete.
