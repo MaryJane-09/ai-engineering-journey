@@ -1,6 +1,6 @@
 # SE 00 Lesson 13: Python for AI Engineering
 
-These notes summarize the [official Python for AI Engineering lesson](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/00-setup-and-tooling/13-python-for-ai-engineering). The train-only normalization comparison is pending; see [`experiment.md`](experiment.md) and [`normalization-check.py`](normalization-check.py).
+These notes summarize the [official Python for AI Engineering lesson](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/00-setup-and-tooling/13-python-for-ai-engineering). The train-only normalization comparison is complete; see [`experiment.md`](experiment.md) and [`normalization-check.py`](normalization-check.py).
 
 ## Python patterns used in AI code
 
@@ -20,4 +20,4 @@ A Python list holds references to Python objects. A loop over millions of floats
 
 ## Learner evidence and review
 
-The learner correctly predicted that calls to a function with a mutable list default share the same list. They initially selected per-mini-batch statistics for normalization, then explained that fitting with test data would leak information into the test set. The exercise showed train-only statistics `(2.0, 0.816...)` versus combined statistics `(26.5, 42.441...)`. Quiz score: 1/2; review fitting statistics on training data only and applying them unchanged to validation/test.
+The learner correctly predicted that calls to a function with a mutable list default share the same list. They initially selected per-mini-batch statistics for normalization, then explained that fitting with test data would leak information into the test set. The exercise showed train-only statistics `(2.0, 0.816...)` versus combined statistics `(26.5, 42.441...)`. In review, the learner explained that mean and standard deviation from the training set should be reused for validation and test so those sets do not influence the process. Review complete. Quiz score: 1/2.
