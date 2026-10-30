@@ -1,6 +1,6 @@
 # SE 00 Lesson 12: Debugging & Profiling
 
-These notes summarize the [official Debugging & Profiling lesson](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/00-setup-and-tooling/12-debugging-and-profiling). The short profiling exercise is pending; see [`experiment.md`](experiment.md).
+These notes summarize the [official Debugging & Profiling lesson](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/00-setup-and-tooling/12-debugging-and-profiling). The short profiling exercise is complete; see [`experiment.md`](experiment.md).
 
 ## Debug correctness at three levels
 
@@ -22,4 +22,4 @@ A profiler measures resource use, such as execution time and memory allocation. 
 
 ## Learner evidence and review
 
-The learner correctly identified the data loader as the first place to investigate when profiling shows data loading dominates, and chose gradient checks plus `breakpoint()` for NaN loss. They ran the `cProfile` exercise; `time.sleep` took 0.100 seconds of a 0.101-second profile. They asked what profiling does not prove; the tutor clarified that measuring resource use does not verify output correctness or model generalization. They missed the data-leakage and common time-profile questions. Quiz score: 1/3.
+The learner correctly identified the data loader as the first place to investigate when profiling shows data loading dominates, and chose gradient checks plus `breakpoint()` for NaN loss. They ran the `cProfile` exercise; `time.sleep` took 0.100 seconds of a 0.101-second profile. They asked what profiling does not prove; the tutor clarified that measuring resource use does not verify output correctness or model generalization. In review, the learner identified test-file access as a possible source of leakage and explained that a time profile reveals slow functions but not whether their outputs are correct. Review complete. Quiz score: 1/3.
