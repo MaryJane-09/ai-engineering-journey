@@ -1,6 +1,6 @@
 # SE 00 Lesson 10: Terminal & Shell
 
-These notes summarize the [official Terminal & Shell lesson](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/00-setup-and-tooling/10-terminal-and-shell). The small log pipeline exercise is pending; see [`experiment.md`](experiment.md).
+These notes summarize the [official Terminal & Shell lesson](https://github.com/rohitg00/ai-engineering-from-scratch/tree/main/phases/00-setup-and-tooling/10-terminal-and-shell). The small log pipeline exercise is complete; see [`experiment.md`](experiment.md).
 
 ## Terminal and shell
 
@@ -26,4 +26,4 @@ The terminal is the interface where you type commands. The shell (such as `zsh` 
 
 ## Learner evidence and review
 
-The learner correctly explained that `> output.log 2>&1` captures both normal output and errors. Their log pipeline printed `0.8`, `0.4`, and `0.2`. They then summarized the distinction: `>` redirects output to a file, while `|` sends the first command's output to the next command as input. They were unsure about tmux's advantage and selected the wrong command for SSH port forwarding. Quiz score: 2/3; review tmux detach/reattach and `ssh -L`.
+The learner correctly explained that `> output.log 2>&1` captures both normal output and errors. Their log pipeline printed `0.8`, `0.4`, and `0.2`. They then summarized the distinction: `>` redirects output to a file, while `|` sends the first command's output to the next command as input. In review, they explained that detaching from tmux lets them reattach later. For `ssh -L 8888:localhost:8888`, they initially typed `localhost:888` and clarified that the missing `8` was a typo. The local endpoint is `http://localhost:8888`, with the local and remote ports both set to 8888. Review complete. Quiz score: 2/3.
