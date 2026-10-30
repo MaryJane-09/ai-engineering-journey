@@ -63,6 +63,7 @@ Phase status: **SE 00 — Setup & Tooling: Done**.
 | 2026-10-24 | [SE 00/11 Linux for AI](phases/phase-00/11-linux-for-ai/notes.md) | 0/3; repeated items 3/3; fresh retake 1/3 | On the repeated questions, corrected all three initial misses. In the fresh retake, answered `rsync` correctly; then used `chmod +x` to make a temporary script executable. Review `~` for the home directory, the `apt update`/`apt install` sequence, `du`, and `sed -i`. |
 | 2026-10-30 | [SE 00/11 Linux for AI](phases/phase-00/11-linux-for-ai/notes.md) | Review complete | Identified `~` as the home directory and gave `sudo apt update` followed by `sudo apt install curl`. Reviewed `du -sh` (`-s` summary, `-h` human-readable) and identified macOS `sed -i ''` syntax. |
 | 2026-10-24 | [SE 00/12 Debugging & Profiling](phases/phase-00/12-debugging-and-profiling/notes.md) | 1/3 | Correctly identified the data loader as the place to investigate when profiling shows data loading dominates, and chose gradient checks plus `breakpoint()` for NaN loss. Review suspiciously high test accuracy and how to read time profiles. |
+| 2026-10-30 | [SE 00/12 Debugging & Profiling](phases/phase-00/12-debugging-and-profiling/notes.md) | Review complete | Identified test-file access as a possible data-leakage source and explained that a time profile locates slow functions but does not verify output correctness. |
 | 2026-10-24 | [SE 00/13 Python for AI Engineering](phases/phase-00/13-python-for-ai-engineering/notes.md) | 1/2 | Correctly predicted that a mutable default list is shared across calls. Review fitting normalization statistics on the training split only; a small comparison script is pending. |
 
 ## Between-lesson practice
@@ -80,5 +81,4 @@ Phase status: **SE 00 — Setup & Tooling: Done**.
 | SE 00/13 Python for AI Engineering | See `phases/phase-00/13-python-for-ai-engineering/experiment.md`: compare feature normalization statistics calculated from training rows only versus training plus test rows. | The learner observed train-only statistics `(2.0, 0.816...)` and combined statistics `(26.5, 42.441...)`, then explained that using test data would leak information into the test set. | **Complete** |
 
 ## Review queue
-- SE 00/12 Debugging & Profiling — review data leakage as a possible cause of suspiciously high test accuracy, and use profiling results to locate time bottlenecks.
 - SE 00/13 Python for AI Engineering — fit feature normalization statistics on training data only and apply the same values to validation and test data.
