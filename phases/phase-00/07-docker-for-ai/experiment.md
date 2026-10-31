@@ -25,3 +25,57 @@ Later, the learner ran the documented command in their Ubuntu terminal with `sud
 ## Result
 
 The initial attempts returned `permission denied` because the learner's account could not access the Docker daemon socket. Running the command with `sudo` succeeded: the repository files appeared inside the container at `/workspace`. This hands-on volume exercise is **complete**. The mount maps `$PWD` on the host to `/workspace` in the container.
+
+## Build practice
+
+### Question 7 — Build a small Python image and mount the lesson folder
+
+In this lesson folder, create `hello.py` that prints its working directory and the sorted names of files in `/workspace`. Create a `Dockerfile` using `python:3.12-slim`, set `/app` as its working directory, copy `hello.py` into the image, and configure it to run with Python. Build the image from this folder and run it with this folder mounted at `/workspace`:
+
+```bash
+sudo docker build -t lesson07-hello .
+sudo docker run --rm -v "$PWD:/workspace" lesson07-hello
+```
+
+Record the contents of both files, the build/run output, and explain which files come from the image and which are visible through the bind mount. Do not include any credentials.
+
+**Answer and evidence:** The learner created this Dockerfile:
+
+```dockerfile
+FROM python:3.12-slim
+
+WORKDIR /app
+
+COPY hello.py .
+
+CMD ["python", "hello.py"]
+```
+
+The Python script prints the current working directory and lists the mounted directory:
+
+```python
+import os
+
+print(f"Working Directory: {os.getcwd()}")
+print("Files in /workspace:")
+try:
+    files = sorted(os.listdir('/workspace'))
+    for file in files:
+        print(f"  -{file}")
+except FileNotFoundError:
+    print("  - /workspace directory not found (is it mounted?)")
+```
+
+The image built successfully and was tagged `lesson07-hello:latest`. Docker printed a legacy builder deprecation warning, but the build completed. Running the container produced:
+
+```text
+Working Directory: /app
+Files in /workspace:
+  -Dockerfile
+  -experiment.md
+  -hello.py
+  -notes.md
+  -reflection.md
+```
+
+The learner identified `/app` as coming from the image and the listed `/workspace` files as coming from the bind mount. The image provides Python, sets `/app` as the working directory, and copies `hello.py`; the runtime mount exposes the host lesson folder at `/workspace`.
